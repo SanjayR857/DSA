@@ -1,4 +1,4 @@
-# Input: welcome2ourcountry34
+v  # Input: welcome2ourcountry34
 # Output: True
 
 # Input: stringwithoutnum

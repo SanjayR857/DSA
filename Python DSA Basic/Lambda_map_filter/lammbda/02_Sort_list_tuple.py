@@ -4,5 +4,5 @@
 # Sorting the List of Tuples:
 # [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
 list_tuple = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
-list_tuple.sort(key=lambda x:x[1],reverse=True)
+list_tuple.sort(key=lambda x:len(x[0]))
 print(list_tuple)

@@ -1,6 +1,6 @@
 from datetime import  datetime
 
-string = datetime.strptime('Jul 1 2014 2:43PM','%b %d %Y %I:%M%p')
+string = datetime.strptime('Jul 1 2014 2:34PM','%b %d %Y %I:%M%p')
 date_object = datetime.strptime('Jul 1 2014 2:43PM', '%b %d %Y %I:%M%p')
 print(date_object)
 print(string)

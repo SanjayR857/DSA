@@ -8,5 +8,6 @@ list_1 = [word for word in input_a.split() if word not in input_b.split()]+[word
 print(list_1)
 
 # using set 
-set_1 = set(input_a.split()).symmetric_difference(input_b.split())
+set_1 = list(set(input_a.split()).symmetric_difference(input_b.split()))
 print(set_1)
+

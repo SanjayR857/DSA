@@ -10,3 +10,8 @@ tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'),
 
 number = list(filter(None,tuples))
 print(number)
+
+for i in tuples:
+    if i==():
+        tuples.remove(i)
+print(tuples)
