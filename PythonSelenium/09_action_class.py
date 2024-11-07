@@ -10,6 +10,7 @@ Action.reset_actions()
 Action.reset_actions()
 Action.release()
 Action.perform()
+Action.scroll_to_element()
 '''
 
 from time import sleep

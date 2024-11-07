@@ -3,7 +3,7 @@
 def cache_value(func):
     cache = {}
     def wrap(*args,**kwargs):
-        key = (*args,*kwargs.items())
+        key = args
         print(key)
 
         if key in cache:

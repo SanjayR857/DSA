@@ -18,6 +18,7 @@ def get_two_sum_indexs_2(nums,target):
         if complement in seen:
             return [seen[complement],i]
         seen[num] = i
+        print(seen)
     
 
 print(get_two_sum_indexs_2(nums,target))  

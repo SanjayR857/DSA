@@ -5,6 +5,12 @@ d=[]
 e=[]
 
 
+seen = set()
+seen.add(2)
+seen.add(3)
+seen.add(2)
+print(seen)
+
 for i in a:
     b=list(reversed(a))
 print(b)

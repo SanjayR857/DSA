@@ -13,4 +13,30 @@ def sum_of_paries(num_list,sum):
                 output.append(f'{num_list[i]}+{num_list[j]}')
     return output
 
+
+def sum_of_pairs(num_list, target_sum):
+    seen = set()
+    output = []
+
+    for num in num_list:
+        complement = target_sum - num
+        if complement in seen:
+            output.append(f'{complement}+{num}')
+        seen.add(num)
+
+    return output
+
+
+def sanjay(list_1,targt):
+    seen = set()
+    output = []
+    for num in list_1:
+        comp = targt - num
+        if comp in seen:
+            return comp,num
+        seen.add(num)
+
+
 print(sum_of_paries([2, 4, 3, 5, 6, -2, 4, 7, 8, 9],7))
+print(sum_of_pairs([2, 4, 3, 5, 6, -2, 4, 7, 8, 9,1,6], 7))
+print(sanjay([2, 4, 3, 5, 6, -2, 4, 7, 8, 9],7))
