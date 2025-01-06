@@ -23,16 +23,45 @@
 #     print('False')
 import os
 
-import pdfplumber
 
-with pdfplumber.open("C://Users//SANJAYR//Downloads//pdf-sample.pdf") as pdf:
-    all_text = ""
-    for page in pdf.pages:
-        all_text += page.extract_text() + "\n"
 
-    print(all_text)
+# import time
+#
+# from selenium import webdriver
+#
+# # Setup ChromeOptions
+#
+# driver = webdriver.Chrome()
+# # Open a webpage
+# driver.get("https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf")
+# time.sleep(10)
+# # Try triggering menu actions using JS Executor
+# driver.execute_script("chrome.send('openSettings');")  # Opens Settings page directly
+#
+# driver.quit()
 
-    # Optionally, write to a text file
-    with open("extracted_text.txt", "w", encoding="utf-8") as output_file:
-        output_file.write(all_text)
+
+import time
+import pyautogui
+import pyperclip
+
+
+def pdf_download_using_python():
+    time.sleep(2)
+    pyautogui.hotkey('ctrl', 's')
+    time.sleep(2)
+
+    # if want to store in project value you have to make the pdf file name unquie or it will pop of duplicate update pdf fill with latest pdf name
+    # send text arg to this method make it as unique
+
+    pyautogui.hotkey('ctrl', 'a')
+    pyautogui.hotkey('ctrl', 'c')
+    time.sleep(1)
+    #current_text = pyperclip.paste()
+    #new_text = (f'C:\\Users\\shash\\PycharmProjects\\DSA\\PDF_download\\{current_text}')
+    #pyautogui.typewrite(new_text)
+
+    time.sleep(2)
+    pyautogui.press('enter')
+    time.sleep(2)
 
